@@ -7,47 +7,48 @@
 
 ## DAFTAR ISI (Table of Contents)
 
-| | |
-|---|---|
-| 🟢 | [RINGKASAN EKSEKUTIF — Baca Ini Dulu (2 Menit)](#ringkasan-eksekutif--baca-ini-dulu-2-menit) |
-| | |
-| 0 | [BAB 0: CERITA KITA — Kenapa Game Ini HARUS Ada](#bab-0-cerita-kita--kenapa-game-ini-harus-ada) |
-| | |
-| 1 | [BAB 1: MASALAH — Empat Krisis yang Kita Hadapi](#bab-1-masalah--empat-krisis-yang-kita-hadapi) |
-| | |
-| 2 | [BAB 2: SOLUSI — Game yang Bikin Kamu Bisa Bertani Beneran](#bab-2-solusi--game-yang-bikin-kamu-bisa-bertani-beneran) |
-| | · [2.1 Apa itu Ninja Urban Farming?](#21-apa-itu-ninja-urban-farming) |
-| | · [2.2 Kenapa HARUS Game?](#22-tapi-kenapa-harus-game-kenapa-nggak-bikin-video-tutorial-aja) |
-| | · [2.3 Apa yang Bikin Game Ini BEDA?](#23-apa-yang-bikin-game-ini-beda-dari-game-farming-lain) |
-| | |
-| 3 | [BAB 3: BUKTI — Validasi Ilmiah](#bab-3-bukti-ini-bukan-halusinasi--validasi-ilmiah) |
-| | |
-| 4 | [BAB 4: BISNIS MODEL CANVAS (BMC)](#bab-4-bisnis-model-canvas-bmc) |
-| | · [Customer Segments](#customer-segments-siapa-pelanggan-kami) · [Value Proposition](#value-proposition-apa-yang-kami-tawarkan) · [Revenue Streams](#revenue-streams-dari-mana-uangnya) |
-| | · [Key Resources](#key-resources-apa-yang-kami-punya) · [Key Activities](#key-activities-apa-yang-kami-lakukan) · [Key Partners](#key-partners-siapa-mitra-kami) |
-| | · [Customer Relationships](#customer-relationships-bagaimana-kami-menjaga-pelanggan) · [Channels](#channels-bagaimana-pelanggan-menemukan-kami) · [Cost Structure](#cost-structure-biaya-apa-saja) |
-| | |
-| 5 | [BAB 5: ANALISIS PASAR — Seberapa Besar Peluangnya?](#bab-5-analisis-pasar--seberapa-besar-peluangnya) |
-| | |
-| 6 | [BAB 6: PROYEKSI KEUANGAN](#bab-6-proyeksi-keuangan-sederhana) |
-| | · [6.1 Asumsi Dasar](#61-asumsi-dasar) · [6.2 Proyeksi 3 Tahun](#62-proyeksi-3-tahun) |
-| | |
-| 7 | [BAB 7: COMPETITIVE ADVANTAGE](#bab-7-kenapa-kami-bisa-menang--competitive-advantage) |
-| | |
-| 8 | [BAB 8: DAMPAK — Kenapa Game Ini Penting Buat Dunia](#bab-8-dampak--kenapa-game-ini-penting-buat-dunia) |
-| | · [8.1 Selaras dengan 7 SDGs](#81-selaras-dengan-7-sdgs-tujuan-pembangunan-berkelanjutan-pbb) · [8.2 Impact Metrics](#82-impact-metrics--yang-akan-kami-ukur) |
-| | |
-| 9 | [BAB 9: RENCANA EKSEKUSI — Gimana Caranya?](#bab-9-rencana-eksekusi--gimana-caranya) |
-| | · [Fase 1: Buktikan](#fase-1-buktikan-julidesember-2026) · [Fase 2: Luncurkan](#fase-2-luncurkan-januarijuni-2027) · [Fase 3: Skala](#fase-3-skala-juli-2027) |
-| | |
-| 10 | [BAB 10: TIM — Siapa di Belakang Ini?](#bab-10-tim--siapa-di-belakang-ini) |
-| | |
-| 11 | [BAB 11: PENUTUP — Satu Game, Empat Krisis, Jutaan Keluarga](#bab-11-penutup--satu-game-empat-krisis-jutaan-keluarga) |
-| | |
-| 📎 | [LAMPIRAN — Ringkasan Dokumen Teknis](#lampiran-ringkasan-dokumen-teknis) |
+|     |                                                                                                                                                                                                    |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🟢  | [RINGKASAN EKSEKUTIF — Baca Ini Dulu (2 Menit)](#ringkasan-eksekutif)                                                                                                                              |
+|     |                                                                                                                                                                                                    |
+| 0   | [BAB 0: CERITA KITA — Kenapa Game Ini HARUS Ada](#bab-0-cerita-kita)                                                                                                                               |
+|     |                                                                                                                                                                                                    |
+| 1   | [BAB 1: MASALAH — Empat Krisis yang Kita Hadapi](#bab-1-masalah)                                                                                                                                   |
+|     |                                                                                                                                                                                                    |
+| 2   | [BAB 2: SOLUSI — Game yang Bikin Kamu Bisa Bertani Beneran](#bab-2-solusi)                                                                                                                         |
+|     | · [2.1 Apa itu Ninja Urban Farming?](#21-apa-itu-ninja-urban-farming)                                                                                                                              |
+|     | · [2.2 Kenapa HARUS Game?](#22-kenapa-harus-game)                                                                                                                                                  |
+|     | · [2.3 Apa yang Bikin Game Ini BEDA?](#23-apa-yang-bikin-beda)                                                                                                                                     |
+|     |                                                                                                                                                                                                    |
+| 3   | [BAB 3: BUKTI — Validasi Ilmiah](#bab-3-bukti)                                                                                                                                                     |
+|     |                                                                                                                                                                                                    |
+| 4   | [BAB 4: BISNIS MODEL CANVAS (BMC)](#bab-4-bmc)                                                                                                                                                     |
+|     | · [Customer Segments](#customer-segments) · [Value Proposition](#value-proposition) · [Revenue Streams](#revenue-streams)                                                                          |
+|     | · [Key Resources](#key-resources) · [Key Activities](#key-activities) · [Key Partners](#key-partners)                                                                                              |
+|     | · [Customer Relationships](#customer-relationships) · [Channels](#channels) · [Cost Structure](#cost-structure)                                                                                    |
+|     |                                                                                                                                                                                                    |
+| 5   | [BAB 5: ANALISIS PASAR — Seberapa Besar Peluangnya?](#bab-5-analisis-pasar)                                                                                                                        |
+|     |                                                                                                                                                                                                    |
+| 6   | [BAB 6: PROYEKSI KEUANGAN](#bab-6-proyeksi-keuangan)                                                                                                                                               |
+|     | · [6.1 Asumsi Dasar](#61-asumsi-dasar) · [6.2 Proyeksi 3 Tahun](#62-proyeksi-3-tahun)                                                                                                              |
+|     |                                                                                                                                                                                                    |
+| 7   | [BAB 7: COMPETITIVE ADVANTAGE](#bab-7-competitive-advantage)                                                                                                                                       |
+|     |                                                                                                                                                                                                    |
+| 8   | [BAB 8: DAMPAK — Kenapa Game Ini Penting Buat Dunia](#bab-8-dampak)                                                                                                                                |
+|     | · [8.1 Selaras dengan 7 SDGs](#81-selaras-dengan-7-sdgs) · [8.2 Impact Metrics](#82-impact-metrics)                                                                                                |
+|     |                                                                                                                                                                                                    |
+| 9   | [BAB 9: RENCANA EKSEKUSI — Gimana Caranya?](#bab-9-rencana-eksekusi)                                                                                                                               |
+|     | · [Fase 1: Buktikan](#fase-1-buktikan) · [Fase 2: Luncurkan](#fase-2-luncurkan) · [Fase 3: Skala](#fase-3-skala)                                                                                  |
+|     |                                                                                                                                                                                                    |
+| 10  | [BAB 10: TIM — Siapa di Belakang Ini?](#bab-10-tim)                                                                                                                                                |
+|     |                                                                                                                                                                                                    |
+| 11  | [BAB 11: PENUTUP — Satu Game, Empat Krisis, Jutaan Keluarga](#bab-11-penutup)                                                                                                                      |
+|     |                                                                                                                                                                                                    |
+| 📎  | [LAMPIRAN — Ringkasan Dokumen Teknis](#lampiran)                                                                                                                                                   |
 
 ---
 
+<a id="ringkasan-eksekutif"></a>
 ## RINGKASAN EKSEKUTIF — Baca Ini Dulu (2 Menit)
 
 **[Gambar 19.1: Infografis Visi - Karakter Roblox sedang memegang hasil panen lele dan sayuran di atap rumah dengan sistem akuaponik, siluet kota metropolis di latar belakang. Caption: "Dari Game Menuju Ketahanan Pangan Dunia Nyata"]**
@@ -66,6 +67,7 @@ Itulah **Ninja Urban Farming** — game Roblox pertama di dunia yang mengajarkan
 
 ---
 
+<a id="bab-0-cerita-kita"></a>
 ## BAB 0: CERITA KITA — Kenapa Game Ini HARUS Ada
 
 ### Pernahkah kamu ngalamin ini?
@@ -85,6 +87,7 @@ Generasi kita lahir dengan HP di tangan. Kita belajar dari YouTube, TikTok, game
 
 ---
 
+<a id="bab-1-masalah"></a>
 ## BAB 1: MASALAH — Empat Krisis yang Kita Hadapi
 
 Kita hidup di zaman di mana **empat krisis terjadi bersamaan.** Dan generasi kitalah yang paling kena dampaknya.
@@ -120,8 +123,10 @@ mindmap
 
 ---
 
+<a id="bab-2-solusi"></a>
 ## BAB 2: SOLUSI — Game yang Bikin Kamu Bisa Bertani Beneran
 
+<a id="21-apa-itu-ninja-urban-farming"></a>
 ### 2.1 Apa itu Ninja Urban Farming?
 
 Sebuah game Roblox di mana kamu mengelola halaman belakang rumah seluas **75 m²** menjadi ekosistem pertanian yang:
@@ -177,6 +182,7 @@ graph TD
     G -->|Panen Lele| E
 ```
 
+<a id="22-kenapa-harus-game"></a>
 ### 2.2 Tapi Kenapa HARUS Game? Kenapa Nggak Bikin Video Tutorial Aja?
 
 Karena **belajar dengan melakukan** (learning by doing) itu **7× lebih efektif** daripada belajar dengan menonton.
@@ -188,6 +194,7 @@ Karena **belajar dengan melakukan** (learning by doing) itu **7× lebih efektif*
 | 🏫 Kursus pertanian | Mahal (Rp 500K-2jt). Jauh. Cuma weekend. |
 | 🎮 **Game interaktif** | **Belajar sambil main. Trial and error aman. Gagal? Ulangi. Sukses? Langsung dipraktikkan.** |
 
+<a id="23-apa-yang-bikin-beda"></a>
 ### 2.3 Apa yang Bikin Game Ini BEDA dari Game Farming Lain?
 
 | Game Farming Biasa | Ninja Urban Farming |
@@ -202,6 +209,7 @@ Karena **belajar dengan melakukan** (learning by doing) itu **7× lebih efektif*
 
 ---
 
+<a id="bab-3-bukti"></a>
 ## BAB 3: BUKTI INI BUKAN HALUSINASI — Validasi Ilmiah
 
 Kami tidak asal klaim. Setiap sistem dalam game ini sudah **divalidasi** terhadap sains nyata.
@@ -224,12 +232,14 @@ Kami menggunakan buku panduan **Ninja Urban Farming** sebagai basis — buku yan
 
 ---
 
+<a id="bab-4-bmc"></a>
 ## BAB 4: BISNIS MODEL CANVAS (BMC)
 
 > *Ini adalah BMC yang harus dikumpulkan untuk Stage 1 SMBPC (Deadline: 13 Agustus 2026)*
 
 **[Gambar 19.2: Visualisasi Kanvas Model Bisnis (BMC) - Menampilkan 9 blok dengan desain modern, warna korporat yang elegan, dan ikon representatif untuk setiap elemen blok]**
 
+<a id="customer-segments"></a>
 ### Customer Segments (Siapa Pelanggan Kami?)
 
 | Segmen | Deskripsi | Ukuran Potensial |
@@ -239,6 +249,7 @@ Kami menggunakan buku panduan **Ninja Urban Farming** sebagai basis — buku yan
 | **Urban Farmer Pemula** | Ingin mulai bertani di rumah tapi takut gagal. Butuh "simulasi dulu" sebelum investasi alat beneran | 200+ juta urban residents Indonesia |
 | **NGO & Dinas Pemerintah** | Program ketahanan pangan, butuh alat edukasi massal berbiaya rendah | Ratusan NGO, dinas pertanian, dan program pemerintah yang aktif dalam isu ketahanan pangan nasional |
 
+<a id="value-proposition"></a>
 ### Value Proposition (Apa yang Kami Tawarkan?)
 
 **Untuk Pelajar:** "Belajar skill hidup sambil main game yang kamu suka."
@@ -246,6 +257,7 @@ Kami menggunakan buku panduan **Ninja Urban Farming** sebagai basis — buku yan
 **Untuk Urban Farmer:** "Simulasi 100% akurat — apa yang berhasil di game, berhasil di lapangan."
 **Untuk NGO/Pemerintah:** "Edukasi ketahanan pangan skala nasional dengan biaya Rp 0/keluarga."
 
+<a id="revenue-streams"></a>
 ### Revenue Streams (Dari Mana Uangnya?)
 
 | Sumber | Penjelasan | Estimasi/tahun |
@@ -257,6 +269,7 @@ Kami menggunakan buku panduan **Ninja Urban Farming** sebagai basis — buku yan
 | Token kenyamanan | Skip masa tunggu fermentasi (opsional) | Rp 100 juta |
 | Kemitraan NGO | Lisensi massal + custom scenario | Rp 150 juta |
 
+<a id="key-resources"></a>
 ### Key Resources (Apa yang Kami Punya?)
 
 | Resource | Kenapa Berharga |
@@ -266,6 +279,7 @@ Kami menggunakan buku panduan **Ninja Urban Farming** sebagai basis — buku yan
 | **Tim developer + SME** | Kombinasi ahli game development dan ahli urban farming |
 | **Platform Roblox** | 70 juta pemain aktif harian — audiens bawaan |
 
+<a id="key-activities"></a>
 ### Key Activities (Apa yang Kami Lakukan?)
 
 1. Mengembangkan game Roblox (18 bulan)
@@ -273,6 +287,7 @@ Kami menggunakan buku panduan **Ninja Urban Farming** sebagai basis — buku yan
 3. Kemitraan dengan sekolah
 4. Community building (Discord, event, konten edukasi)
 
+<a id="key-partners"></a>
 ### Key Partners (Siapa Mitra Kami?)
 
 | Mitra | Peran |
@@ -282,6 +297,7 @@ Kami menggunakan buku panduan **Ninja Urban Farming** sebagai basis — buku yan
 | Dinas Pendidikan | Adopsi ke sekolah |
 | Komunitas Urban Farming | Testimoni, konten, validasi lapangan |
 
+<a id="customer-relationships"></a>
 ### Customer Relationships (Bagaimana Kami Menjaga Pelanggan?)
 
 - **Tutorial time-skip gratis** — pemain panen pertama dalam 3 menit
@@ -290,6 +306,7 @@ Kami menggunakan buku panduan **Ninja Urban Farming** sebagai basis — buku yan
 - **Sertifikasi progresif** — Pemula → Praktisi → Ahli → Ninja Master
 - **Komunitas** — papan peringkat, farm visit, konten buatan pengguna
 
+<a id="channels"></a>
 ### Channels (Bagaimana Pelanggan Menemukan Kami?)
 
 | Channel | Target |
@@ -299,6 +316,7 @@ Kami menggunakan buku panduan **Ninja Urban Farming** sebagai basis — buku yan
 | Media sosial (TikTok, Instagram) | Urban farmer pemula |
 | Proposal ke Dinas | NGO/pemerintah |
 
+<a id="cost-structure"></a>
 ### Cost Structure (Biaya Apa Saja?)
 
 | Biaya | Per Tahun |
@@ -312,6 +330,7 @@ Kami menggunakan buku panduan **Ninja Urban Farming** sebagai basis — buku yan
 
 ---
 
+<a id="bab-5-analisis-pasar"></a>
 ## BAB 5: ANALISIS PASAR — Seberapa Besar Peluangnya?
 
 ### "Ngapain sih main game pertanian? Kan membosankan."
@@ -345,16 +364,19 @@ Pasar kita bukan "orang yang mau belajar pertanian." Pasar kita adalah **70 juta
 
 ---
 
+<a id="bab-6-proyeksi-keuangan"></a>
 ## BAB 6: PROYEKSI KEUANGAN SEDERHANA
 
 > *Kami sengaja membuat proyeksi konservatif. Angka sebenarnya bisa lebih tinggi.*
 
+<a id="61-asumsi-dasar"></a>
 ### 6.1 Asumsi Dasar
 
 - 1 pemain rata-rata menghabiskan Rp 35.000/tahun (setara 100 Robux)
 - Game farming edukasi sejenis di Roblox: 50.000–300.000 MAU
 - Lisensi sekolah: Rp 350.000/tahun/sekolah (diskon 80% dari harga normal untuk edukasi)
 
+<a id="62-proyeksi-3-tahun"></a>
 ### 6.2 Proyeksi 3 Tahun
 
 **[Diagram 19.4: Komposisi Proyeksi Pendapatan]**
@@ -381,6 +403,7 @@ pie title "Proyeksi Proporsi Pendapatan Tahunan"
 
 ---
 
+<a id="bab-7-competitive-advantage"></a>
 ## BAB 7: KENAPA KAMI BISA MENANG? — Competitive Advantage
 
 ### "Oke, idenya bagus. Tapi kenapa kami?"
@@ -394,8 +417,10 @@ pie title "Proyeksi Proporsi Pendapatan Tahunan"
 
 ---
 
+<a id="bab-8-dampak"></a>
 ## BAB 8: DAMPAK — Kenapa Game Ini Penting Buat Dunia
 
+<a id="81-selaras-dengan-7-sdgs"></a>
 ### 8.1 Selaras dengan 7 SDGs (Tujuan Pembangunan Berkelanjutan PBB)
 
 **[Gambar 19.3: Infografis 7 SDGs - Lingkaran logo SDGs PBB (2, 3, 4, 8, 11, 12, 13) dengan panah yang terhubung erat ke logo Ninja Urban Farming di tengah, menunjukkan interkoneksi langsung]**
@@ -410,6 +435,7 @@ pie title "Proyeksi Proporsi Pendapatan Tahunan"
 | **SDG 11 — Kota Berkelanjutan** | Urban farming mengubah lahan tidur jadi produktif. Mengurangi urban heat island. |
 | **SDG 8 — Pekerjaan & Pertumbuhan Ekonomi** | Membuka peluang: urban farmer, trainer, konten kreator pertanian. |
 
+<a id="82-impact-metrics"></a>
 ### 8.2 Impact Metrics — Yang Akan Kami Ukur
 
 | Metric | Target (3 Tahun) |
@@ -422,6 +448,7 @@ pie title "Proyeksi Proporsi Pendapatan Tahunan"
 
 ---
 
+<a id="bab-9-rencana-eksekusi"></a>
 ## BAB 9: RENCANA EKSEKUSI — Gimana Caranya?
 
 **[Diagram 19.5: Timeline Eksekusi Roadmap]**
@@ -445,6 +472,7 @@ gantt
     Full Game & Co-op       :         des7, 2027-07, 2027-12
 ```
 
+<a id="fase-1-buktikan"></a>
 ### Fase 1: BUKTIKAN (Juli–Desember 2026)
 
 > *"Bikin prototype yang bisa dimainkan dan diuji."*
@@ -454,6 +482,7 @@ gantt
 - ⏳ **Nov:** Uji ke 5 sekolah pilot — kumpulkan feedback
 - ⏳ **Des:** Iterasi berdasarkan feedback
 
+<a id="fase-2-luncurkan"></a>
 ### Fase 2: LUNCURKAN (Januari–Juni 2027)
 
 > *"Soft launch ke publik, mulai dapat pemain dan pendapatan."*
@@ -463,6 +492,7 @@ gantt
 - Monetisasi kosmetik mulai berjalan
 - 5 sekolah = 30 lisensi terjual
 
+<a id="fase-3-skala"></a>
 ### Fase 3: SKALA (Juli 2027+)
 
 > *"Dari 5.000 ke 100.000 pemain."*
@@ -474,6 +504,7 @@ gantt
 
 ---
 
+<a id="bab-10-tim"></a>
 ## BAB 10: TIM — Siapa di Belakang Ini?
 
 | Peran | Siapa | Kenapa Dia Orang yang Tepat |
@@ -486,6 +517,7 @@ gantt
 
 ---
 
+<a id="bab-11-penutup"></a>
 ## BAB 11: PENUTUP — Satu Game, Empat Krisis, Jutaan Keluarga
 
 Tema SMBPC tahun ini adalah:
@@ -504,6 +536,7 @@ Ini bukan sekadar proposal bisnis. **Ini adalah gerakan.**
 
 ---
 
+<a id="lampiran"></a>
 ## LAMPIRAN: Ringkasan Dokumen Teknis
 
 | Dokumen | Isi |
