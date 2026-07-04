@@ -1,0 +1,9 @@
+{
+  "templateFolderPath": "_Templates",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "0_Inbox",
+  "attachmentFolderPath": "_Assets",
+  "showInlineTitle": true,
+  "alwaysUpdateLinks": true,
+  "trashFolder": ".trash"
+}

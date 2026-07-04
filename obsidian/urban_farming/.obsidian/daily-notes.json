@@ -1,0 +1,6 @@
+{
+  "folder": "4_Daily",
+  "template": "_Templates/tpl-catatan-harian.md",
+  "format": "YYYY-MM-DD",
+  "autorun": false
+}
