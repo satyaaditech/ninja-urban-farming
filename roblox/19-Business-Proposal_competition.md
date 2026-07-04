@@ -385,14 +385,31 @@ pie title "Proyeksi Proporsi Pendapatan Tahunan"
 
 ## BAB 7: KENAPA KAMI BISA MENANG? — Competitive Advantage
 
+### 7.0 Apakah Game Seperti Ini Sudah Ada di Roblox?
+
+**Jawaban singkat: Tidak. Sama sekali tidak ada.**
+
+Kami telah meriset seluruh game farming di Roblox (Juli 2026). Hasilnya:
+
+| Temuan | Detail |
+|--------|--------|
+| **Total game farming di Roblox** | Puluhan, semuanya idle clicker — klik tanam, klik panen |
+| **Game dengan aquaponics** | **0** — tidak ada yang menggabungkan ikan + tanaman |
+| **Game dengan closed-loop system** | **0** — tidak ada yang memodelkan limbah → nutrisi |
+| **Game dengan akurasi ilmiah** | **0** — tidak ada yang pakai rumus nyata (ABW, pH, NPK) |
+| **Game edukasi pertanian** | **0** — semua entertainment-first |
+| **Game konteks Indonesia** | **0** — semua bertema Barat (jagung, gandum, sapi) |
+
+Game farming paling populer di Roblox saat ini — **Grow a Garden** — dibuat oleh anak 16 tahun dalam 3 hari, dan memecahkan rekor 22.3 juta concurrent players. Ini membuktikan **pasar farming di Roblox sangat masif** — tapi seluruh konten yang ada adalah **idle clicker tanpa edukasi, tanpa realisme, tanpa transfer skill.**
+
 ### "Oke, idenya bagus. Tapi kenapa kami?"
 
 | Pertanyaan Juri | Jawaban Kami |
 |----------------|-------------|
-| "Kenapa nggak ada yang bikin duluan?" | Karena butuh **dua keahlian langka sekaligus:** (1) paham urban farming secara ilmiah, (2) bisa develop game Roblox. Kebanyakan orang cuma punya salah satu. |
-| "Apa yang bikin tidak bisa ditiru?" | **Content moat:** 17 dokumen teknis, 84 klaim ilmiah tervalidasi, buku panduan original. Kompetitor tidak bisa copy-paste ini — harus research dari nol. |
-| "Kenapa harus Roblox? Kenapa nggak bikin aplikasi sendiri?" | Karena **70 juta pemain sudah ada di sana.** Bikin aplikasi sendiri = harus akuisisi user dari nol. Di Roblox = user sudah menunggu. |
-| "Apa buktinya game edukasi bisa sukses di Roblox?" | *Adopt Me* (167M visits) mengajarkan tanggung jawab. *Bloxburg* (8M visits) mengajarkan manajemen. *Theme Park Tycoon* mengajarkan bisnis. **Pasar game edukasi di Roblox itu NYATA — cuma belum ada yang masuk niche urban farming.** |
+| "Kenapa nggak ada yang bikin duluan?" | Karena butuh **dua keahlian langka sekaligus:** (1) paham urban farming secara ilmiah, (2) bisa develop game Roblox. Kebanyakan orang cuma punya salah satu. Game farming yang ada dibuat oleh developer game tanpa background pertanian — hasilnya idle clicker tanpa substansi. |
+| "Apa yang bikin tidak bisa ditiru?" | **Content moat:** 17 dokumen teknis, 84 klaim ilmiah tervalidasi, buku panduan original 26 bab. Kompetitor tidak bisa copy-paste ini — harus research dari nol. Game farming terpopuler (Grow a Garden) dibuat dalam 3 hari oleh anak 16 tahun. Game kami dibangun di atas riset bertahun-tahun. |
+| "Kenapa harus Roblox? Kenapa nggak bikin aplikasi sendiri?" | Karena **111 juta pemain aktif harian sudah ada di sana.** Bikin aplikasi sendiri = harus akuisisi user dari nol. Di Roblox = user sudah menunggu. Grow a Garden membuktikan farming adalah genre terpopuler di platform ini. |
+| "Apa buktinya game edukasi bisa sukses di Roblox?" | *Adopt Me* mengajarkan tanggung jawab. *Bloxburg* mengajarkan manajemen rumah. *Theme Park Tycoon* mengajarkan bisnis. **Pasar game edukasi di Roblox itu NYATA — cuma belum ada yang masuk niche urban farming.** Plus: 22.3 juta concurrent players di game farming idle membuktikan demand masif. Bayangkan jika audience sebesar itu mendapat konten yang benar-benar BERMAKNA. |
 
 ---
 
@@ -516,6 +533,7 @@ Ini bukan sekadar proposal bisnis. **Ini adalah gerakan.**
 | `08-Katalog-Komoditas.md` | 11 spesies tanaman + 3 hewan dengan kebutuhan perawatan unik |
 | `09-Validasi-Ilmiah.md` | 84 klaim divalidasi, 92.9% akurat, 0% halusinasi |
 | `17-Audit-Konsistensi.md` | 17 dokumen diaudit, 10/10 inkonsistensi diperbaiki |
+| `22-Kompetitor-Analysis.md` | Riset pasar: analisis semua game farming Roblox, feature gap, USP Ninja Urban Farming |
 
 **Total: 17 dokumen, 15.000+ baris — blueprint siap eksekusi.**
 
