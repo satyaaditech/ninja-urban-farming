@@ -2,21 +2,27 @@
 
 Repositori utama proyek **Ninja Urban Farming** — panduan komprehensif berbahasa Indonesia tentang pertanian perkotaan organik dalam sistem closed-loop.
 
+🟢 **Website sudah online dan aktif di:** [https://satyaadiditech.github.io/ninja-urban-farming](https://satyaadiditech.github.io/ninja-urban-farming)
+
 Repo ini berisi:
 - Manuscript buku utama
 - Draft konten dan pipeline editorial
 - Obsidian vault untuk knowledge management
-- Website statis yang dideploy ke GitHub Pages
+- Website statis yang dideploy otomatis ke GitHub Pages
 
 ---
 
 ## 🌐 Website
 
-Website proyek ini dibangun dengan [Astro](https://astro.build) v7 dan di-deploy otomatis ke **GitHub Pages**.
+Website proyek ini dibangun dengan [Astro](https://astro.build) v7 dan di-deploy otomatis ke **GitHub Pages** melalui **GitHub Actions**.
 
-**URL:** [https://satyaadiditech.github.io/ninja-urban-farming](https://satyaadiditech.github.io/ninja-urban-farming)
+**URL aktif:** [https://satyaadiditech.github.io/ninja-urban-farming](https://satyaadiditech.github.io/ninja-urban-farming)
+
+**Status deployment:** [Lihat di GitHub Actions](https://github.com/satyaaditech/ninja-urban-farming/actions)
 
 ### Menjalankan Website Secara Lokal
+
+Prasyarat: Node.js **>=22.12.0** (Astro v7 membutuhkan Node.js 22+)
 
 ```bash
 cd website
@@ -58,16 +64,22 @@ Hasil build ada di `website/dist/`.
 ├── roblox/                     # Direktori cadangan untuk konten game terkait
 │
 └── website/                    # Source code website Astro
-    ├── .github/workflows/      # GitHub Actions untuk auto-deploy
+    ├── .github/workflows/      # GitHub Actions untuk auto-deploy ke GitHub Pages
     ├── public/                 # Aset statis
+    │   └── data/               # Data CSV dan file publik lainnya
     ├── src/
     │   ├── components/         # Komponen reusable
+    │   │   ├── Navigation.astro
+    │   │   ├── Footer.astro
+    │   │   └── ImagePlaceholder.astro
     │   ├── layouts/            # Layout halaman
+    │   │   └── Layout.astro
     │   ├── content/            # Konten Markdown (content collections)
     │   │   ├── sop/            # SOP budidaya
     │   │   ├── formulas/       # Katalog resep formula
     │   │   ├── klinis-tanaman/ # Penyakit tanaman
     │   │   └── klinis-lele/    # Penyakit ikan lele
+    │   ├── data/               # Data JSON untuk katalog
     │   ├── pages/              # Halaman website
     │   └── content.config.ts   # Skema content collections Astro v7
     ├── astro.config.mjs        # Konfigurasi Astro + GitHub Pages
@@ -81,9 +93,9 @@ Hasil build ada di `website/dist/`.
 Website saat ini mencakup:
 
 - **Beranda** — pengenalan sistem Ninja Urban Farming
-- **SOP Budidaya** — panduan operasional tanaman (kangkung, tomat, selada, sawi, bayam, daun bawang, seledri)
+- **SOP Budidaya** — 7 panduan operasional tanaman (kangkung, tomat, selada, sawi, bayam, daun bawang, seledri)
 - **Katalog Resep** — 53+ formula organik untuk pupuk, pestisida, fungisida, media tanam, pakan, dll.
-- **Klinis Tanaman** — diagnosa dan penanganan penyakit/hama tanaman
+- **Klinis Tanaman** — 6 penyakit/hama umum pada tanaman
 - **Klinis Lele** — 8 penyakit umum pada budidaya lele bioflok
 - **Tentang** — penjelasan sistem closed-loop
 
@@ -138,4 +150,5 @@ Proyek ini adalah proyek pribadi. Semua konten dalam Bahasa Indonesia.
 
 - Semua konten website ada di folder `website/src/content/` sebagai file Markdown.
 - Jika ingin menambah SOP, formula, atau data klinis baru, cukup tambahkan file Markdown di folder content yang sesuai.
+- Website akan otomatis rebuild dan redeploy setiap kali ada push ke branch `master`.
 - Untuk backup seluruh project, cukup push repo ini ke GitHub.

@@ -2,11 +2,15 @@
 
 Website statis untuk proyek **Ninja Urban Farming**, dibuat dengan [Astro](https://astro.build) v7 dan dioptimalkan untuk deployment ke **GitHub Pages**.
 
+🟢 **Website sudah online di:** [https://satyaadiditech.github.io/ninja-urban-farming](https://satyaadiditech.github.io/ninja-urban-farming)
+
+---
+
 ## 🚀 Menjalankan Secara Lokal
 
 ### Prasyarat
 
-- Node.js 18+ (terinstall: v22.21.0)
+- Node.js **>=22.12.0** (Astro v7 membutuhkan Node.js 22+)
 - npm atau yarn
 
 ### Langkah 1: Install Dependensi
@@ -38,80 +42,80 @@ Hasil build ada di folder `dist/`.
 npm run preview
 ```
 
+---
+
 ## 📁 Struktur Folder
 
 ```
 website/
-├── public/              # Aset statis (gambar, favicon)
-│   └── images/          # Semua gambar website
+├── .github/workflows/      # GitHub Actions untuk auto-deploy
+├── public/                 # Aset statis
+│   ├── data/               # Data publik (CSV, dll)
+│   └── favicon.svg
 ├── src/
-│   ├── components/      # Komponen reusable
+│   ├── components/         # Komponen reusable
 │   │   ├── Navigation.astro
 │   │   ├── Footer.astro
 │   │   └── ImagePlaceholder.astro
-│   ├── layouts/         # Layout halaman
+│   ├── layouts/            # Layout halaman
 │   │   └── Layout.astro
-│   ├── content/         # Konten Markdown (content collections)
-│   │   ├── sop/         # SOP budidaya
-│   │   ├── formulas/    # Formula & resep
-│   │   └── guides/      # Panduan umum
-│   ├── pages/           # Halaman website
+│   ├── content/            # Konten Markdown (content collections)
+│   │   ├── sop/            # SOP budidaya
+│   │   ├── formulas/       # Katalog resep formula
+│   │   ├── klinis-tanaman/ # Penyakit tanaman
+│   │   └── klinis-lele/    # Penyakit ikan lele
+│   ├── data/               # Data JSON untuk katalog
+│   ├── pages/              # Halaman website
 │   │   ├── index.astro
 │   │   ├── tentang.astro
 │   │   ├── sop/
 │   │   │   ├── index.astro
 │   │   │   └── [slug].astro
 │   │   ├── katalog/
-│   │   │   └── index.astro
+│   │   │   ├── index.astro
+│   │   │   └── [slug].astro
 │   │   └── klinis/
-│   │       └── index.astro
-│   └── content.config.ts  # Definisi content collections (Astro v7)
-├── public/images/       # Tempat gambar nanti
-├── astro.config.mjs     # Konfigurasi Astro + GitHub Pages
+│   │       ├── index.astro
+│   │       ├── tanaman/
+│   │       │   ├── index.astro
+│   │       │   └── [slug].astro
+│   │       └── lele/
+│   │           ├── index.astro
+│   │           └── [slug].astro
+│   └── content.config.ts   # Definisi content collections (Astro v7)
+├── astro.config.mjs        # Konfigurasi Astro + GitHub Pages
 ├── package.json
 └── README.md
 ```
 
+---
+
 ## 🔗 Deploy ke GitHub Pages
 
-### Langkah 1: Buat Repository GitHub
+Deploy dilakukan otomatis oleh GitHub Actions setiap kali ada push ke branch `master`.
 
-1. Buka GitHub → New Repository
-2. Nama repository: `ninja-urban-farming` (atau nama lain)
-3. Jangan inisialisasi README (sudah ada di lokal)
+### Konfigurasi Saat Ini
 
-### Langkah 2: Update `astro.config.mjs`
+File `.github/workflows/deploy.yml` sudah terkonfigurasi untuk:
+- Build project dari folder `website/`
+- Deploy hasil build ke GitHub Pages
 
-Ganti `base` dengan nama repository-mu:
+Konfigurasi Astro ada di `astro.config.mjs`:
 
 ```js
 export default defineConfig({
-  site: 'https://USERNAME.github.io',
+  site: 'https://satyaadiditech.github.io',
   base: '/ninja-urban-farming',
   // ...
 });
 ```
 
-### Langkah 3: Push ke GitHub
+### Status Deployment
 
-```bash
-cd website
-git init
-git add .
-git commit -m "Initial commit: Ninja Urban Farming website"
-git branch -M main
-git remote add origin https://github.com/USERNAME/ninja-urban-farming.git
-git push -u origin main
-```
+Cek status terbaru di tab Actions:
+[https://github.com/satyaaditech/ninja-urban-farming/actions](https://github.com/satyaaditech/ninja-urban-farming/actions)
 
-### Langkah 4: Aktifkan GitHub Pages
-
-1. Buka repository di GitHub
-2. Settings → Pages
-3. Source: GitHub Actions
-4. Gunakan workflow Astro bawaan (akan otomatis terdeteksi)
-
-Atau deploy manual dari branch `gh-pages`.
+---
 
 ## 🖼️ Placeholder Gambar
 
@@ -125,19 +129,7 @@ Semua gambar saat ini menggunakan komponen `ImagePlaceholder.astro`. Setiap plac
 
 Saat fine-tuning nanti, ganti placeholder dengan gambar nyata di folder `public/images/`.
 
-## 📊 Integrasi Google Sheets
-
-Bagian **Katalog Resep** akan dihubungkan dengan Google Sheets untuk fitur:
-- Pencarian resep
-- Filter kategori
-- Konversi dosis
-- Tampilan praktis
-
-Cara setup:
-1. Buat Google Sheets baru
-2. Publish to web (File → Share → Publish to web)
-3. Copy URL CSV
-4. Update konfigurasi di `src/pages/katalog/index.astro`
+---
 
 ## 📝 Menambah Konten Baru
 
@@ -162,11 +154,19 @@ tags: ["tag1", "tag2"]
 ### Menambah Formula Baru
 
 1. Buat file `.md` di `src/content/formulas/`
-2. Gunakan frontmatter sesuai schema di `src/content/config.ts`
+2. Gunakan frontmatter sesuai schema di `src/content.config.ts`
+
+### Menambah Data Klinis
+
+1. Untuk tanaman: buat file `.md` di `src/content/klinis-tanaman/`
+2. Untuk lele: buat file `.md` di `src/content/klinis-lele/`
+3. Gunakan frontmatter sesuai schema masing-masing
+
+---
 
 ## ⚙️ Konfigurasi Penting
 
-Jika nama repository GitHub-mu berbeda, ubah di `astro.config.mjs`:
+Jika nama repository GitHub berubah, ubah di `astro.config.mjs`:
 
 ```js
 base: '/nama-repository-mu'
@@ -179,12 +179,16 @@ site: 'https://www.domainkamu.com',
 base: '/', // atau kosongkan
 ```
 
+---
+
 ## 🛠️ Teknologi
 
-- [Astro](https://astro.build) — Static site generator
+- [Astro](https://astro.build) v7 — Static site generator
 - [MDX](https://mdxjs.com) — Markdown dengan komponen
 - [GitHub Pages](https://pages.github.com) — Hosting gratis
-- [Google Sheets](https://sheets.google.com) — Database gratis untuk katalog
+- [GitHub Actions](https://github.com/features/actions) — CI/CD untuk auto-deploy
+
+---
 
 ## 📄 Lisensi
 
