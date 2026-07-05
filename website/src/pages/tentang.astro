@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+---
+
+<Layout 
+  title="Tentang — Ninja Urban Farming" 
+  description="Tentang proyek Ninja Urban Farming — panduan pertanian perkotaan berbasis sistem closed-loop organik."
+>
+  <header class="page-header">
+    <div class="container">
+      <h1>Tentang Ninja Urban Farming</h1>
+      <p>Visi, sistem, dan filosofi di balik panduan ini.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>Apa Itu Ninja Urban Farming?</h2>
+          <p>
+            Ninja Urban Farming adalah panduan komprehensif untuk bertani di perkotaan dengan sistem 
+            <strong>closed-loop organik</strong>. Setiap komponen saling mendukung: limbah organik dapur 
+            menjadi pakan maggot BSF, maggot menjadi pakan lele, air lele menjadi pupuk sayuran, dan 
+            limbah tanaman kembali menjadi kompos.
+          </p>
+          
+          <h2>Untuk Siapa?</h2>
+          <div class="audience-grid">
+            <div class="audience-item">
+              <span class="audience-icon">🏠</span>
+              <span>Pemilik rumah dengan lahan terbatas</span>
+            </div>
+            <div class="audience-item">
+              <span class="audience-icon">🏢</span>
+              <span>Penghuni apartemen yang ingin balkon produktif</span>
+            </div>
+            <div class="audience-item">
+              <span class="audience-icon">🍳</span>
+              <span>Orang tua yang ingin sayuran segar untuk keluarga</span>
+            </div>
+            <div class="audience-item">
+              <span class="audience-icon">🌱</span>
+              <span>Pemula yang ingin memulai urban farming tanpa modal besar</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-visual">
+          <ImagePlaceholder 
+            alt="Komunitas Urban Farming" 
+            caption="Ilustrasi komunitas urban farming di rooftop apartemen: banyak pot dan raised bed hijau, orang-orang sedang merawat tanaman, latar kota modern, sore hari. Gaya flat modern, warna hangat."
+            height="400px"
+          />
+        </div>
+      </div>
+      
+      <div class="philosophy-card">
+        <blockquote>
+          "Tidak ada limbah dalam alam. Setiap output adalah input untuk siklus berikutnya."
+        </blockquote>
+      </div>
+      
+      <div class="how-to-use">
+        <h2>Cara Menggunakan Website Ini</h2>
+        <p>
+          Website ini dirancang sebagai <strong>referensi praktis</strong>. Kamu bisa langsung menuju 
+          ke SOP budidaya yang ingin diterapkan, mencari resep formula di Katalog, atau mendiagnosa 
+          masalah tanaman/ikan di bagian Klinis.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 3rem;
+  }
+  
+  .about-content h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .about-content p {
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+  
+  .audience-grid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .audience-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+  }
+  
+  .audience-icon {
+    font-size: 1.5rem;
+  }
+  
+  .philosophy-card {
+    background: linear-gradient(135deg, var(--color-primary-900) 0%, var(--color-primary-700) 100%);
+    color: white;
+    border-radius: var(--radius-xl);
+    padding: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .philosophy-card blockquote {
+    margin: 0;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-style: italic;
+    line-height: 1.5;
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
+  
+  .how-to-use {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .how-to-use p {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .philosophy-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>

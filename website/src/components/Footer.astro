@@ -1,0 +1,146 @@
+---
+const currentYear = new Date().getFullYear();
+
+const footerLinks = [
+  { label: 'Beranda', href: '/ninja-urban-farming/' },
+  { label: 'SOP Budidaya', href: '/ninja-urban-farming/sop' },
+  { label: 'Katalog Resep', href: '/ninja-urban-farming/katalog' },
+  { label: 'Klinis', href: '/ninja-urban-farming/klinis' }
+];
+---
+
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ninja-urban-farming/" class="footer-brand-link">
+          <span class="footer-brand-icon">🥷</span>
+          <span>Ninja Urban Farming</span>
+        </a>
+        <p class="footer-description">
+          Panduan praktis pertanian perkotaan berbasis sistem closed-loop organik. 
+          Tanam sendiri, panen sendiri, makan sendiri.
+        </p>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          {footerLinks.map(link => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Sumber Daya</h4>
+        <ul>
+          <li><a href="/ninja-urban-farming/katalog">Formula Organik</a></li>
+          <li><a href="/ninja-urban-farming/klinis">Diagnosa Penyakit</a></li>
+          <li><a href="/ninja-urban-farming/tentang">Tentang Kami</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© {currentYear} Ninja Urban Farming. Dibuat dengan ❤️ untuk petani kota Indonesia.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .main-footer {
+    background: var(--color-primary-900);
+    color: #e2e8f0;
+    padding: 4rem 1.5rem 2rem;
+    margin-top: 0;
+  }
+  
+  .footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-brand-link:hover {
+    color: var(--color-primary-300);
+  }
+  
+  .footer-brand-icon {
+    font-size: 1.5rem;
+  }
+  
+  .footer-description {
+    color: #94a3b8;
+    line-height: 1.7;
+    max-width: 360px;
+    margin-bottom: 0;
+  }
+  
+  .footer-links h4 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    margin-top: 0;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--color-primary-300);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .footer-description {
+      max-width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,168 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const diseases = await getCollection('klinis-tanaman');
+  return diseases.map(disease => ({
+    params: { slug: disease.id },
+    props: { disease }
+  }));
+}
+
+type Props = {
+  disease: CollectionEntry<'klinis-tanaman'>;
+};
+
+const { disease } = Astro.props;
+const { Content } = await render(disease);
+
+const typeLabels: Record<string, { label: string; class: string }> = {
+  jamur: { label: 'Jamur', class: 'type-jamur' },
+  hama: { label: 'Hama', class: 'type-hama' },
+  fisiologis: { label: 'Fisiologis', class: 'type-fisiologis' }
+};
+
+const typeInfo = typeLabels[disease.data.type] || { label: disease.data.type, class: '' };
+---
+
+<Layout 
+  title={`${disease.data.title} — Klinis Tanaman`} 
+  description={disease.data.description}
+>
+  <article class="disease-detail">
+    <header class="disease-detail-header">
+      <div class="container">
+        <div class="disease-detail-content">
+          <div class="disease-breadcrumbs">
+            <a href="/ninja-urban-farming/">Beranda</a>
+            <span>/</span>
+            <a href="/ninja-urban-farming/klinis">Klinis</a>
+            <span>/</span>
+            <a href="/ninja-urban-farming/klinis/tanaman">Tanaman</a>
+            <span>/</span>
+            <span>{disease.data.title}</span>
+          </div>
+          <h1>{disease.data.title}</h1>
+          <p class="disease-detail-description">{disease.data.description}</p>
+          <div class="disease-detail-meta">
+            <span class="tag">{disease.data.category}</span>
+            <span class={`type-badge ${typeInfo.class}`}>{typeInfo.label}</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="container">
+      <div class="prose">
+        <Content />
+      </div>
+      
+      <div class="disease-footer">
+        <a href="/ninja-urban-farming/klinis/tanaman" class="btn btn-outline">← Kembali ke Daftar Penyakit Tanaman</a>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .disease-detail {
+    background: var(--color-bg);
+  }
+  
+  .disease-detail-header {
+    background: linear-gradient(135deg, var(--color-primary-900) 0%, var(--color-primary-700) 100%);
+    color: white;
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    margin-bottom: 2rem;
+  }
+  
+  .disease-detail-content {
+    max-width: 800px;
+  }
+  
+  .disease-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    flex-wrap: wrap;
+  }
+  
+  .disease-breadcrumbs a {
+    color: var(--color-primary-300);
+  }
+  
+  .disease-breadcrumbs a:hover {
+    color: white;
+  }
+  
+  .disease-detail-header h1 {
+    color: white;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  
+  .disease-detail-description {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  
+  .disease-detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  
+  .disease-detail-meta .tag {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+  }
+  
+  .type-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+  }
+  
+  .type-jamur {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  .type-hama {
+    background: #dbeafe;
+    color: #1e40af;
+  }
+  
+  .type-fisiologis {
+    background: #d1fae5;
+    color: #065f46;
+  }
+  
+  .prose {
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .disease-footer {
+    padding: 2rem 0 5rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .prose {
+      padding: 1.5rem;
+    }
+  }
+</style>

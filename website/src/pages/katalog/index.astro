@@ -1,0 +1,387 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const formulas = await getCollection('formulas');
+const sortedFormulas = formulas.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const categories = [...new Set(sortedFormulas.map(f => f.data.category))];
+const tags = [...new Set(sortedFormulas.flatMap(f => f.data.tags))].sort();
+
+const totalFormulas = sortedFormulas.length;
+---
+
+<Layout 
+  title="Katalog Resep & Formula — Ninja Urban Farming" 
+  description={`${totalFormulas} resep formula organik untuk pupuk, pestisida, booster, media tanam, dan pakan ternak dalam sistem closed-loop Ninja Urban Farming.`}
+>
+  <header class="page-header">
+    <div class="container">
+      <h1>🧪 Katalog Resep & Formula</h1>
+      <p>{totalFormulas} ramuan organik untuk sistem closed-loop — pupuk, pestisida, booster, media tanam, dan pakan ternak.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <!-- Search & Filter -->
+      <div class="catalog-controls">
+        <div class="search-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Cari resep (contoh: K-Booster, Eco-Enzyme, PesNab...)" />
+        </div>
+        
+        <div class="filter-groups">
+          <div class="filter-group">
+            <span class="filter-label">Kategori:</span>
+            <div class="filter-buttons" id="categoryFilters">
+              <button class="filter-btn active" data-filter="all" data-type="category">Semua</button>
+              {categories.map(cat => (
+                <button class="filter-btn" data-filter={cat} data-type="category">{cat}</button>
+              ))}
+            </div>
+          </div>
+          
+          <div class="filter-group">
+            <span class="filter-label">Tag populer:</span>
+            <div class="filter-buttons" id="tagFilters">
+              <button class="filter-btn active" data-filter="all" data-type="tag">Semua</button>
+              {tags.slice(0, 8).map(tag => (
+                <button class="filter-btn" data-filter={tag} data-type="tag">{tag}</button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Results count -->
+      <div class="results-info">
+        Menampilkan <strong id="resultsCount">{totalFormulas}</strong> dari {totalFormulas} resep
+      </div>
+      
+      <!-- Formula Grid -->
+      <div class="card-grid" id="formulaGrid">
+        {sortedFormulas.map(formula => (
+          <article class="card formula-card" data-category={formula.data.category} data-tags={formula.data.tags.join(',')} data-search={`${formula.data.title} ${formula.data.description} ${formula.data.tags.join(' ')} ${formula.data.ingredients?.join(' ') || ''}`.toLowerCase()}>
+            <div class="card-meta">
+              <span class="tag">{formula.data.category}</span>
+            </div>
+            <h3>{formula.data.title}</h3>
+            <p>{formula.data.description}</p>
+            
+            {formula.data.dosage && (
+              <div class="formula-dosage">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                </svg>
+                <span>{formula.data.dosage}</span>
+              </div>
+            )}
+            
+            {formula.data.ingredients && formula.data.ingredients.length > 0 && (
+              <div class="formula-ingredients">
+                <span class="ingredients-label">Bahan utama:</span>
+                <span class="ingredients-list">{formula.data.ingredients.join(', ')}</span>
+              </div>
+            )}
+            
+            <div class="card-tags">
+              {formula.data.tags.map(tag => (
+                <span class="mini-tag">{tag}</span>
+              ))}
+            </div>
+            
+            <a href={`/ninja-urban-farming/katalog/${formula.id}`} class="btn btn-sm">Lihat Resep Lengkap →</a>
+          </article>
+        ))}
+      </div>
+      
+      <!-- Empty state -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <div class="empty-icon">🔍</div>
+        <h3>Tidak ada resep yang cocok</h3>
+        <p>Coba kata kunci lain atau ubah filter yang dipilih.</p>
+      </div>
+      
+      <!-- Google Sheets Integration -->
+      <div class="sheets-section">
+        <div class="sheets-card">
+          <div class="sheets-icon">📊</div>
+          <div class="sheets-content">
+            <h3>Download Data untuk Google Sheets</h3>
+            <p>Semua resep tersedia dalam format CSV yang bisa diimpor ke Google Sheets untuk pencarian lanjutan atau dicetak.</p>
+            <a href="/ninja-urban-farming/data/formulas.csv" class="btn btn-outline" download>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download CSV ({totalFormulas} resep)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const categoryButtons = document.querySelectorAll('#categoryFilters .filter-btn');
+  const tagButtons = document.querySelectorAll('#tagFilters .filter-btn');
+  const formulaCards = document.querySelectorAll('.formula-card');
+  const resultsCount = document.getElementById('resultsCount');
+  const emptyState = document.getElementById('emptyState');
+  
+  let activeCategory = 'all';
+  let activeTag = 'all';
+  
+  function filterFormulas() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+    
+    formulaCards.forEach(card => {
+      const category = card.dataset.category;
+      const tags = card.dataset.tags;
+      const searchData = card.dataset.search;
+      
+      const matchesSearch = !searchTerm || searchData.includes(searchTerm);
+      const matchesCategory = activeCategory === 'all' || category === activeCategory;
+      const matchesTag = activeTag === 'all' || tags.includes(activeTag);
+      
+      if (matchesSearch && matchesCategory && matchesTag) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    
+    resultsCount.textContent = visibleCount;
+    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+  
+  searchInput.addEventListener('input', filterFormulas);
+  
+  categoryButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      categoryButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.dataset.filter;
+      filterFormulas();
+    });
+  });
+  
+  tagButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tagButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeTag = btn.dataset.filter;
+      filterFormulas();
+    });
+  });
+</script>
+
+<style>
+  .catalog-controls {
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--color-border);
+  }
+  
+  .search-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-box svg {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .search-box input:focus {
+    outline: none;
+    border-color: var(--color-primary-400);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  }
+  
+  .filter-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .filter-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  
+  .filter-label {
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    padding-top: 0.4rem;
+    flex-shrink: 0;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--color-border);
+    background: white;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-btn:hover {
+    border-color: var(--color-primary-300);
+    color: var(--color-primary-700);
+  }
+  
+  .filter-btn.active {
+    background: var(--color-primary-700);
+    color: white;
+    border-color: var(--color-primary-700);
+  }
+  
+  .results-info {
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .formula-card {
+    border-top: 4px solid var(--color-accent-500);
+  }
+  
+  .formula-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .formula-dosage {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: var(--color-primary-700);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--color-primary-50);
+    border-radius: var(--radius-sm);
+  }
+  
+  .formula-dosage svg {
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  
+  .formula-ingredients {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .ingredients-label {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    border: 2px dashed var(--color-border);
+  }
+  
+  .empty-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .empty-state h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .empty-state p {
+    color: var(--color-text-secondary);
+    margin-bottom: 0;
+  }
+  
+  .sheets-section {
+    margin-top: 4rem;
+  }
+  
+  .sheets-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border: 1px solid var(--color-primary-200);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+  }
+  
+  .sheets-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+  
+  .sheets-content h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .sheets-content p {
+    color: var(--color-text-secondary);
+    margin-bottom: 1.25rem;
+  }
+  
+  @media (max-width: 768px) {
+    .catalog-controls {
+      padding: 1.25rem;
+    }
+    
+    .filter-group {
+      flex-direction: column;
+    }
+    
+    .sheets-card {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+</style>

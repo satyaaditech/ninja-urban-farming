@@ -1,0 +1,136 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const formulas = await getCollection('formulas');
+  return formulas.map(formula => ({
+    params: { slug: formula.id },
+    props: { formula }
+  }));
+}
+
+type Props = {
+  formula: CollectionEntry<'formulas'>;
+};
+
+const { formula } = Astro.props;
+const { Content } = await render(formula);
+---
+
+<Layout 
+  title={`${formula.data.title} — Katalog Resep Ninja`} 
+  description={formula.data.description}
+>
+  <article class="formula-detail">
+    <header class="formula-header">
+      <div class="container">
+        <div class="formula-header-content">
+          <div class="formula-breadcrumbs">
+            <a href="/ninja-urban-farming/">Beranda</a>
+            <span>/</span>
+            <a href="/ninja-urban-farming/katalog">Katalog Resep</a>
+            <span>/</span>
+            <span>{formula.data.title}</span>
+          </div>
+          <h1>{formula.data.title}</h1>
+          <p class="formula-description">{formula.data.description}</p>
+          <div class="formula-meta">
+            <span class="tag">{formula.data.category}</span>
+            {formula.data.tags.map(tag => <span class="tag tag-accent">{tag}</span>)}
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="prose">
+      <Content />
+    </div>
+    
+    <div class="formula-footer container">
+      <a href="/ninja-urban-farming/katalog" class="btn btn-outline">← Kembali ke Katalog</a>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .formula-detail {
+    background: var(--color-bg);
+  }
+  
+  .formula-header {
+    background: linear-gradient(135deg, var(--color-accent-600) 0%, var(--color-accent-500) 100%);
+    color: white;
+    padding: clamp(3rem, 8vw, 5rem) 0;
+    margin-bottom: 2rem;
+  }
+  
+  .formula-header-content {
+    max-width: 800px;
+  }
+  
+  .formula-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    flex-wrap: wrap;
+  }
+  
+  .formula-breadcrumbs a {
+    color: var(--color-accent-100);
+  }
+  
+  .formula-breadcrumbs a:hover {
+    color: white;
+  }
+  
+  .formula-header h1 {
+    color: white;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  
+  .formula-description {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  
+  .formula-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  
+  .formula-meta .tag {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+  }
+  
+  .prose {
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    margin-top: -3rem;
+    position: relative;
+    z-index: 1;
+    padding: 3rem 2.5rem;
+  }
+  
+  .formula-footer {
+    padding: 3rem 0 5rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .prose {
+      padding: 2rem 1.25rem;
+      margin-top: -2rem;
+    }
+  }
+</style>

@@ -1,0 +1,139 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Klinis — Ninja Urban Farming" 
+  description="Panduan diagnosis dan penanganan penyakit pada ikan lele dan tanaman urban farming."
+>
+  <header class="page-header">
+    <div class="container">
+      <h1>🏥 Klinis</h1>
+      <p>Diagnosis cepat dan solusi praktis untuk masalah kesehatan tanaman dan ikan.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="card-grid">
+        <div class="card clinic-card">
+          <div class="clinic-icon">🐟</div>
+          <h3>Klinis Lele</h3>
+          <p>8 penyakit umum pada budidaya lele bioflok: gejala, penyebab, dan penanganan organik.</p>
+          <ul class="clinic-list">
+            <li>White Spot / Bintik Putih</li>
+            <li>Columnaris / Fin Rot</li>
+            <li>Jamur Air</li>
+            <li>Septikemia Bakteri</li>
+            <li>Kutu Jangkar</li>
+            <li>Kutu Ikan</li>
+            <li>Dropsy</li>
+            <li>Sirip & Ekor Rusak</li>
+          </ul>
+          <a href="/ninja-urban-farming/klinis/lele" class="btn">Buka Klinis Lele</a>
+        </div>
+        
+        <div class="card clinic-card">
+          <div class="clinic-icon">🌿</div>
+          <h3>Klinis Tanaman</h3>
+          <p>6 masalah kesehatan tanaman urban farming: hama, jamur, dan gangguan fisiologis.</p>
+          <ul class="clinic-list">
+            <li>Layu Fusarium</li>
+            <li>Busuk Daun & Bercak Daun</li>
+            <li>Damping-Off</li>
+            <li>Kutu Daun & Whitefly</li>
+            <li>Ulat Kubis & Ulat Tanduk</li>
+            <li>Blossom-End Rot</li>
+          </ul>
+          <a href="/ninja-urban-farming/klinis/tanaman" class="btn">Buka Klinis Tanaman</a>
+        </div>
+      </div>
+      
+      <div class="emergency-card">
+        <div class="emergency-icon">🚨</div>
+        <div class="emergency-content">
+          <h3>Ingat: Pencegahan Lebih Baik dari Pengobatan</h3>
+          <p>Sebagian besar penyakit muncul karena kualitas air buruk, kepadatan tinggi, atau tanaman stres. Pantau sistemmu setiap hari, jaga kualitas air, dan deteksi dini.</p>
+          <a href="/ninja-urban-farming/sop" class="btn">Lihat SOP Pencegahan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .clinic-card {
+    text-align: center;
+    border-top: 4px solid var(--color-primary-500);
+  }
+  
+  .clinic-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--color-primary-50);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 1.25rem;
+  }
+  
+  .clinic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    text-align: left;
+  }
+  
+  .clinic-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+    color: var(--color-text-secondary);
+  }
+  
+  .clinic-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .clinic-list li::before {
+    content: '•';
+    color: var(--color-primary-500);
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+  
+  .emergency-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border: 1px solid #fecaca;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .emergency-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+  
+  .emergency-content h3 {
+    color: #991b1b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .emergency-content p {
+    color: var(--color-text-secondary);
+    margin-bottom: 1.25rem;
+  }
+  
+  @media (max-width: 768px) {
+    .emergency-card {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+</style>

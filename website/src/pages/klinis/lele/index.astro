@@ -1,0 +1,192 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const diseases = await getCollection('klinis-lele');
+const sortedDiseases = diseases.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const types = [...new Set(sortedDiseases.map(d => d.data.type))];
+---
+
+<Layout 
+  title="Klinis Lele — Ninja Urban Farming" 
+  description="Panduan diagnosis dan penanganan 8 penyakit umum pada ikan lele dalam sistem bioflok organik."
+>
+  <header class="page-header">
+    <div class="container">
+      <h1>🐟 Klinis Lele</h1>
+      <p>8 penyakit umum pada budidaya lele dalam galon & bioflok — gejala, penyebab, dan penanganan organik.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" data-filter="all" data-type="type">Semua</button>
+        {types.map(type => (
+          <button class="filter-btn" data-filter={type} data-type="type">{type}</button>
+        ))}
+      </div>
+      
+      <div class="card-grid" id="diseaseGrid">
+        {sortedDiseases.map(disease => (
+          <article class="card disease-card" data-type={disease.data.type}>
+            <div class="card-meta">
+              <span class="tag">{disease.data.category}</span>
+              <span class={`type-badge type-${disease.data.type.replace(/\s+/g, '-')}`}>{disease.data.type}</span>
+            </div>
+            <h3>{disease.data.title}</h3>
+            <p>{disease.data.description}</p>
+            <div class="symptom-preview">
+              <span class="preview-label">Gejala utama:</span>
+              <span>{disease.data.symptoms[0]}</span>
+            </div>
+            <div class="card-tags">
+              {disease.data.tags.slice(0, 3).map(tag => (
+                <span class="mini-tag">{tag}</span>
+              ))}
+            </div>
+            <a href={`/ninja-urban-farming/klinis/lele/${disease.id}`} class="btn btn-sm">Lihat Penanganan →</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const diseaseCards = document.querySelectorAll('.disease-card');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      diseaseCards.forEach(card => {
+        const type = card.dataset.type;
+        if (filter === 'all' || type === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .filter-label {
+    font-weight: 600;
+    color: var(--color-text-secondary);
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-border);
+    background: white;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: capitalize;
+  }
+  
+  .filter-btn:hover {
+    border-color: var(--color-primary-300);
+    color: var(--color-primary-700);
+  }
+  
+  .filter-btn.active {
+    background: var(--color-primary-700);
+    color: white;
+    border-color: var(--color-primary-700);
+  }
+  
+  .disease-card {
+    border-top: 4px solid var(--color-primary-500);
+  }
+  
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .type-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+  }
+  
+  .type-parasit {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+  
+  .type-bakteri {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  .type-jamur {
+    background: #dbeafe;
+    color: #1e40af;
+  }
+  
+  .type-luka-fisik {
+    background: #d1fae5;
+    color: #065f46;
+  }
+  
+  .symptom-preview {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .preview-label {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+  
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .mini-tag {
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+    background: var(--color-border-light);
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    text-transform: lowercase;
+  }
+  
+  .btn-sm {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.875rem;
+  }
+</style>
