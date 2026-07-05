@@ -152,6 +152,12 @@ tag:
 - [[Jadwal Harian Ninja (15 Menit)]]
 - [[Puyuh Petelur & Kelinci]]
 - ✅ [[SOP Budidaya Tomat — Chung, Red Ruby & Golden Sweet]]
+- ✅ [[SOP Sawi-sawian (Brassica) — Sawi Putih, Caisim, Kailan, Pakcoy & Mustard]]
+- ✅ [[SOP Selada — Selada Hijau & Selada Merah]]
+- ✅ [[SOP Bayam — Bayam Loreng & Bayam Hijau]]
+- ✅ [[SOP Kangkung]]
+- ✅ [[SOP Daun Bawang]]
+- ✅ [[SOP Seledri]]
 
 ---
 
@@ -177,6 +183,7 @@ tag:
 - ✅ [[JMS-IMO Serum]] — Kultur mikroba indigenous
 - ✅ [[Bio-Multiplikasi EM4 Mandiri]] — Perbanyakan EM4 hemat
 - ✅ [[Trik Tomat & Cabai Lebat]] — Nutrisi generatif presisi
+- ✅ [[Katalog-Resep-Formulasi-Urban-Farming]] — 🖨️ Kumpulan lengkap semua resep & formulasi, siap cetak
 
 ---
 
@@ -207,4 +214,4 @@ tag:
 > Klik tautan `[[wikilink]]` untuk membuat atau membuka catatan baru. Setiap tautan yang belum memiliki isi akan berwarna redup — klik untuk mulai menulis.
 
 > [!summary] Progress
-> ✅ **35** dari **81** catatan sudah terisi (43%)
+> ✅ **41** dari **87** catatan sudah terisi (47%)

@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "7e215ef9de52d221",
+    "id": "7bbd4fcc12dfbe0f",
     "type": "split",
     "children": [
       {
-        "id": "61fa56f1359990dc",
+        "id": "85e052a6e71ff223",
         "type": "tabs",
         "children": [
           {
-            "id": "06ef178b425b7325",
+            "id": "49941a8e16c8067e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Katalog-Resep-Formulasi-Urban-Farming.md",
-                "mode": "preview",
-                "source": true
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Katalog-Resep-Formulasi-Urban-Farming"
+              "title": "New tab"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "33dc41e2b66dc383",
+    "id": "6cbd36599de2b832",
     "type": "split",
     "children": [
       {
-        "id": "af5f952a710f5851",
+        "id": "d4d8c0b59d0c10bc",
         "type": "tabs",
         "children": [
           {
-            "id": "ce595d16f4c3c842",
+            "id": "df9fc0e36c525dab",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,12 +44,12 @@
             }
           },
           {
-            "id": "30052f5dd3e7349c",
+            "id": "2ab9c393992bc66e",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"tag\"]",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +61,7 @@
             }
           },
           {
-            "id": "141ddb8760ec6bde",
+            "id": "2683a513aa0437a9",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,20 +77,19 @@
     "width": 300
   },
   "right": {
-    "id": "a4f972b092e68cff",
+    "id": "29e0a5dfba1ea7a9",
     "type": "split",
     "children": [
       {
-        "id": "cb60cfe8f78b9e95",
+        "id": "d8d642682ec8d106",
         "type": "tabs",
         "children": [
           {
-            "id": "3f5b7ef3d7ed72a3",
+            "id": "83d7a3a0726bff0c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0_Inbox/K-Booster Ninja.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +99,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for K-Booster Ninja"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "bf22d9a163c4b9d8",
+            "id": "067afca11e7b14c4",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0_Inbox/K-Booster Ninja.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from K-Booster Ninja"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "d028682480157b9b",
+            "id": "7050a93cce3d06f8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +131,7 @@
             }
           },
           {
-            "id": "736d90f457ffa1e9",
+            "id": "e71978c7dac11d04",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,7 +145,7 @@
             }
           },
           {
-            "id": "2f851964b1ec549f",
+            "id": "bed9cb69d27e230c",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -164,8 +158,7 @@
               "title": "Outline"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -183,44 +176,6 @@
       "bases:Create new base": false
     }
   },
-  "active": "06ef178b425b7325",
-  "lastOpenFiles": [
-    "0_Inbox/SOP Kangkung.md",
-    "0_Inbox/SOP Selada — Selada Hijau & Selada Merah.md",
-    "Katalog-Resep-Formulasi-Urban-Farming.md",
-    "1_Atlas/Urban Farming.md",
-    "0_Inbox/Katalog-Resep-Formulasi-Urban-Farming.md",
-    "0_Inbox/SOP Budidaya Lele dalam Galon — Dari Benih hingga Panen.md",
-    "0_Inbox/SOP Seledri.md",
-    "0_Inbox/SOP Bayam — Bayam Loreng & Bayam Hijau.md",
-    "0_Inbox/SOP Sawi-sawian (Brassica) — Sawi Putih, Caisim, Kailan, Pakcoy & Mustard.md",
-    "0_Inbox/Tomat.md",
-    "0_Inbox/SOP Daun Bawang.md",
-    "0_Inbox/SOP Budidaya Tomat — Chung, Red Ruby & Golden Sweet.md",
-    "0_Inbox/Jejak Karbon Pertanian.md",
-    "0_Inbox/Aminor-Grow.md",
-    "0_Inbox/K-Booster Ninja.md",
-    "0_Inbox/Akuaponik.md",
-    "0_Inbox/Mengapa Urban Farming Penting.md",
-    "0_Inbox/Sejarah Urban Farming.md",
-    "0_Inbox/Definisi & Konsep Urban Farming.md",
-    "0_Inbox/Trik Tomat & Cabai Lebat.md",
-    "0_Inbox/Untitled.base",
-    "0_Inbox/Untitled.md",
-    "0_Inbox/Bio-Multiplikasi EM4 Mandiri.md",
-    "0_Inbox/JMS-IMO Serum.md",
-    "0_Inbox/Humo-Ninja System.md",
-    "0_Inbox/Mag-Elixir.md",
-    "0_Inbox/Cal-Phos Liquid.md",
-    "_Assets/tomato_trench_planting_infographic_1782311250058.png",
-    "_Assets/stacked_bucket_composter_infographic_1782311138097.png",
-    "_Assets/basil_tomato_infographic_1782311044752.png",
-    "_Assets",
-    "_Templates",
-    "4_Daily",
-    "3_Literature",
-    "2_Permanent",
-    "1_Atlas",
-    "0_Inbox"
-  ]
+  "active": "49941a8e16c8067e",
+  "lastOpenFiles": []
 }

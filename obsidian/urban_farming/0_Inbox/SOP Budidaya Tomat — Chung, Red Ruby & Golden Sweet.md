@@ -35,6 +35,55 @@ referensi:
 | **Red Ruby** | Diduga Determinate (semak) | Kecil-sedang | Merah cerah | Saus, masakan, olahan |
 | **Golden Sweet** | Diduga Indeterminate | Sedang | Kuning keemasan | Salad, segar, anak-anak |
 
+### Determinate vs Indeterminate — Penjelasan Lengkap
+
+Dua tipe pertumbuhan ini adalah **pembeda paling fundamental** dalam budidaya tomat. Memahami perbedaan keduanya menentukan seluruh strategi pemangkasan, ajir, dan pengelolaan tanamanmu.
+
+> [!info] Apa Itu Determinate dan Indeterminate?
+> Ini adalah **pola pertumbuhan genetik** tanaman tomat — bukan karakter yang bisa diubah dengan pupuk atau perawatan. Setiap varietas sudah "diprogram" untuk mengikuti salah satu pola ini sejak dari benih.
+
+#### Determinate (Tomat Semak / "Bush Tomato")
+
+| Aspek | Karakteristik |
+|-------|--------------|
+| **Pola tumbuh** | Tanaman tumbuh hingga tinggi tertentu (biasanya 60-100 cm), lalu **berhenti sendiri** — titik tumbuh terminal berubah menjadi tandan bunga terakhir |
+| **Masa berbuah** | **Pendek dan serempak** — semua buah dalam satu tanaman matang dalam rentang 2-4 minggu, lalu tanaman selesai |
+| **Tandan buah** | Biasanya 4-6 tandan per tanaman, muncul hampir bersamaan |
+| **Percabangan** | Bercabang banyak secara alami — membentuk bentuk semak yang padat |
+| **Suckering** | **TIDAK perlu dipangkas** — justru tunas air adalah cabang produktif yang akan menghasilkan buah |
+| **Ajir** | Pendek (80-100 cm) atau bisa tanpa ajir dengan tomato cage (kerangkeng kawat) |
+| **Cocok untuk** | Pengalengan, saus, olahan massal — panen sekaligus. Raised bed standar, pot besar, upside-down gantung. |
+| **Varietas contoh** | Red Ruby, Roma, San Marzano, Celebrity, Bush Early Girl |
+
+> [!tip] Mengapa Determinate Tidak Dipangkas
+> Setiap tunas air pada determinate **adalah cabang buah masa depan**. Jika kamu memangkasnya, kamu justru mengurangi jumlah tandan bunga → panen lebih sedikit. Biarkan tanaman membentuk semak alami — fokuskan energi ke nutrisi dan penyiraman, bukan pemangkasan.
+
+#### Indeterminate (Tomat Merambat / "Vining Tomato")
+
+| Aspek | Karakteristik |
+|-------|--------------|
+| **Pola tumbuh** | Tanaman **tidak pernah berhenti** tumbuh — titik tumbuh terminal terus menghasilkan daun dan batang baru sepanjang musim |
+| **Masa berbuah** | **Panjang dan bertahap** — buah muncul terus-menerus sepanjang hidup tanaman (bisa 6+ bulan di iklim tropis Indonesia) |
+| **Tandan buah** | Tidak terbatas — tandan baru terus terbentuk di sepanjang batang utama seiring tanaman tumbuh |
+| **Percabangan** | Secara alami tumbuh sebagai **satu batang utama** dengan tunas air di setiap ketiak daun — jika dibiarkan, jadi hutan tomat yang kacau |
+| **Suckering** | **WAJIB dipangkas rutin (setiap minggu)** — tunas air adalah "pencuri nutrisi" yang mengalihkan energi dari batang utama dan buah |
+| **Ajir** | Tinggi (minimal 150-200 cm) — harus kokoh karena tanaman bisa mencapai 2-3 meter |
+| **Cocok untuk** | Salad, sandwich, konsumsi segar — panen sedikit-sedikit setiap hari. Vertikultur, ajir tunggal, sistem trellis. |
+| **Varietas contoh** | Chung, Golden Sweet, Beefsteak, Cherry, Cherokee Purple |
+
+> [!tip] Mengapa Indeterminate Harus Dipangkas
+> Tanaman indeterminate yang tidak dipangkas akan mengalokasikan energi ke **ratusan cabang dan daun** — menghasilkan buah kecil, sedikit, dan terlambat. Dengan membatasi tanaman ke 1-2 batang utama, seluruh hasil fotosintesis difokuskan ke sedikit tandan buah → buah lebih besar, lebih manis, panen lebih cepat.
+
+#### Cara Membedakan di Lapangan (Jika Tidak Yakin)
+
+| Indikator | Determinate | Indeterminate |
+|-----------|-------------|---------------|
+| **Tinggi tanaman setelah 60 hari** | Berhenti di ~80-100 cm, bentuk semak padat | Terus tumbuh >150 cm, bentuk ramping menjulang |
+| **Munculnya bunga pertama** | Setelah 4-6 ruas daun | Setelah 8-12 ruas daun |
+| **Jarak antar tandan buah** | Setiap 1-2 ruas | Setiap 3 ruas |
+| **Tunas air di ketiak daun** | Ada — tapi ini CALON CABANG BUAH | Ada — ini PENCURI NUTRISI (harus dibuang) |
+| **Ujung batang setelah berbunga** | Berhenti tumbuh, berubah jadi tandan bunga | Tetap tumbuh — terus menghasilkan daun baru di atas tandan bunga |
+
 > [!tip] Panduan Umum
 > Terlepas dari varietas, **prinsip dasar budidaya tomat** dalam SOP ini (semai, deep planting, transisi nutrisi vegetatif → generatif, pruning untuk indeterminate) berlaku universal untuk semua varietas tomat. Amati tanamanmu — jika tumbuh terus dan menghasilkan tunas air di ketiak daun, itu **indeterminate** (perlu pruning). Jika berhenti sendiri setelah 4-5 tandan buah, itu **determinate** (tidak perlu pruning).
 

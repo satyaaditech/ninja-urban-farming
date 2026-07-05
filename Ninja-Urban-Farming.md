@@ -2027,6 +2027,20 @@ Membeli EM4 komersial setiap kali dibutuhkan bisa membebani anggaran. Teknik ini
 - ✅ Warna cokelat keemasan, nggak berlendir
 - ✅ Nggak ada jamur permukaan
 
+### Resep Skala Kecil (1–2 Liter Output)
+
+💡 **Hemat EM4.** Nggak perlu habisin 1 botol sekaligus. Bikin secukupnya:
+
+| Output Total | EM4 | Molase/Gula Merah | Air Bebas Kaporit | Wadah |
+|-------------|-----|-------------------|-------------------|-------|
+| **1 Liter** | 50 ml (±5 tutup botol) | 50 ml (±3½ sdm) | 900 ml | Botol 1,5 L |
+| **1,5 Liter** | 75 ml (±7½ tutup botol) | 75 ml (±5 sdm) | 1.350 ml | Botol 2 L |
+| **2 Liter** | 100 ml (±½ gelas) | 100 ml (±½ gelas) | 1.800 ml | Botol 2,5 L |
+
+> Rasio tetap **1 : 1 : 18** (EM4 : molase : air). Cara dan fermentasi sama persis.
+
+💰 Dari 1 botol EM4 1 L, kamu bisa bikin **20x batch 1 L** atau **10x batch 2 L**. Nggak boros.
+
 ### Trik Mempercepat Multiplikasi 2x Lipat
 
 💡 **Trik Ninja — Ragi Tape + Air Cucian Beras:**
