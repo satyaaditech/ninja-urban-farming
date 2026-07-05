@@ -2,7 +2,7 @@
 
 Repositori utama proyek **Ninja Urban Farming** — panduan komprehensif berbahasa Indonesia tentang pertanian perkotaan organik dalam sistem closed-loop.
 
-🟢 **Website sudah online dan aktif di:** [https://satyaadiditech.github.io/ninja-urban-farming](https://satyaadiditech.github.io/ninja-urban-farming)
+🟢 **Website sudah online dan aktif di:** [https://satyaadiditech.github.io/ninja-urban-farming/](https://satyaadiditech.github.io/ninja-urban-farming/)
 
 Repo ini berisi:
 - Manuscript buku utama
@@ -16,7 +16,7 @@ Repo ini berisi:
 
 Website proyek ini dibangun dengan [Astro](https://astro.build) v7 dan di-deploy otomatis ke **GitHub Pages** melalui **GitHub Actions**.
 
-**URL aktif:** [https://satyaadiditech.github.io/ninja-urban-farming](https://satyaadiditech.github.io/ninja-urban-farming)
+**URL aktif:** [https://satyaadiditech.github.io/ninja-urban-farming/](https://satyaadiditech.github.io/ninja-urban-farming/)
 
 **Status deployment:** [Lihat di GitHub Actions](https://github.com/satyaaditech/ninja-urban-farming/actions)
 

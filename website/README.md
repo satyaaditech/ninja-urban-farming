@@ -2,7 +2,7 @@
 
 Website statis untuk proyek **Ninja Urban Farming**, dibuat dengan [Astro](https://astro.build) v7 dan dioptimalkan untuk deployment ke **GitHub Pages**.
 
-🟢 **Website sudah online di:** [https://satyaadiditech.github.io/ninja-urban-farming](https://satyaadiditech.github.io/ninja-urban-farming)
+🟢 **Website sudah online di:** [https://satyaadiditech.github.io/ninja-urban-farming/](https://satyaadiditech.github.io/ninja-urban-farming/)
 
 ---
 
